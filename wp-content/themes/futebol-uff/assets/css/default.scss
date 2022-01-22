@@ -1,0 +1,131 @@
+@import 'colors', 'texts';
+
+body{
+    background-color: #F2F3FA;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+strong{
+    font-weight: bold;
+}
+p{
+    font-family: $inter;
+}
+h1, h2, h3{
+    font-family: $poppins;
+}
+.default-btn{
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: $gray-darkest;
+    padding: 20px 30px;
+    background-color: $brand-yellow;
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: -webkit-fit-content;
+    transition: 0.4s;
+    border: 1px solid $brand-yellow;
+    &:hover{
+        background-color: transparent;
+        transition: 0.4s;
+        color: $brand-yellow;
+    }
+}
+
+//ANIMAÇÃO DA HERO
+.hero-scroll{
+    width: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 64px;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover{
+        opacity: 0.7;
+        transition: 0.4s;
+    }
+}
+.arrow{
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  margin: 0 0 3px 4px;
+  width: 16px;
+  height: 16px;
+}
+.arrow-one, .arrow-two, .arrow-three{
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+    animation: mouse-scroll 1s infinite;
+}
+.arrow-one{
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+  margin-top: 1px;
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+.arrow-two{
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+  animation-delay: .2s;
+  animation-direction: alternate;
+  margin-top: -6px;
+}
+.arrow-three{
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+  animation-delay: .3s;
+  animation-direction: alternate;
+  margin-top: -6px;
+}
+
+@-webkit-keyframes mouse-scroll {
+    0%   { opacity: 0;}
+    50%  { opacity: .5;}
+    100% { opacity: 1;}
+}
+@-moz-keyframes mouse-scroll {
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+}
+@-o-keyframes mouse-scroll {
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+}
+@keyframes mouse-scroll {
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+}
+
+@media(max-width: 981px){
+    .hero-scroll{
+        bottom: 16px;
+        .arrow{
+            height: 12px;
+            width: 12px;
+        }
+    }
+    .default-btn{
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+  
