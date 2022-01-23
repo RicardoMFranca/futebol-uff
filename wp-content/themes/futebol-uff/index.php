@@ -4,9 +4,7 @@
     <section class="hero">
         <div class="container">
             <div class="row">
-                <div class="col-lg-1">
-                </div>
-                <div class="col-lg-11">
+                <div class="col-lg-12">
                     <div class="hero-content">
                         <h1 data-aos="fade-right">Aqui um título de até três linhas em caixa alta </h1>
                         <p data-aos="fade-right" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida nascetur proin libero, elementum .</p>
@@ -77,48 +75,60 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1 my-auto">
                     <h2>Aqui um título de até duas linhas </h2>
-                    <div id="accordion">
-                        <div class="faq-container">
-                            <div class="faq-btn" id="headingOne">
-                                <button class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    1. Pergunta frequentemente feita.
+                    <div id="accordion" class="faq-accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Undergraduate Studies
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </div>
-
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="faq-content">
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+                                <div class="card-body">
                                     <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has. been the industry's standard dummy text ever since the</p>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="faq-container">
-                            <div class="faq-btn" id="headingTwo">
-                                <button class="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    2. Pergunta frequentemente feita.
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    1. Pergunta frequentemente feita. 
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="faq-content">
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                                <div class="card-body">
                                     <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has. been the industry's standard dummy text ever since the</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="faq-container">
-                            <div class="faq-btn" id="headingThree">
-                                <button class="" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    3. Mais uma pergunta
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Research
+                                    <i class="fas fa-plus"></i>
                                 </button>
                             </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                <div class="faq-content">
-                                    <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has. been the industry's standard dummy text ever since the</p>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                                <div class="card-body">
+                                   <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has. been the industry's standard dummy text ever since the</p>
                                 </div>
                             </div>
                         </div>
-                        <button class="default-btn">Entrar na fila de espera</button>
                     </div>
+                    <button class="default-btn">Entrar na fila de espera</button>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <div class="container">
+            <h2>Em parceria com</h2>
+            <div class="owl-carousel owl-theme">
+                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/uff-logo.png" alt="" >
+                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/governo-federal.png" alt="" >
+                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/ministerio-da-cidadania.png" alt="" >
+                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/secretaria-especial-do-esporte.png" alt="" class="resized-logo">
             </div>
         </div>
     </section>

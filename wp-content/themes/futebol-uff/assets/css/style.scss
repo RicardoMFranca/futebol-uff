@@ -12,8 +12,7 @@
 
 //HEADER
 header{
-    position: absolute;
-    top: 18px;
+    position: fixed;
     width: 100%;
     z-index: 2;
     display: flex;
@@ -21,10 +20,15 @@ header{
         position: relative;
         .header-container{
             display: flex;
-            justify-content: center;
             align-items: center;
             .nav-container{
+                width: 100%;
+                padding: 16px  0px;
                 nav{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
                     li{
                         display: inline-block;
                         margin-right: 40px;
@@ -38,6 +42,12 @@ header{
                             font-size: 18px;
                             line-height: 100%;
                             color: $white;
+                            transition: 0.4s;
+                            cursor: pointer;
+                            &:hover{
+                                opacity: 0.7;
+                                transition: 0.4s;
+                            }
                         }
                     }
                 }
@@ -52,6 +62,12 @@ header{
                 line-height: 100%;
                 color: $white;
                 transform: translateX(15px);
+                cursor: pointer;
+                transition: 0.4s;
+                &:hover{
+                    opacity: 0.7;
+                    transition: 0.4s;
+                }
             }
         }
     }
@@ -83,41 +99,10 @@ header{
     .container, .row{
         height: 100vh;
     }
-    .col-lg-11, .col-lg-1{
-        position: relative;
-        &::before{
-            height: 100vh;
-            width: 1px;
-            background-color: rgba($white, 0.3);
-            position: absolute;
-            left: 0px;
-            content: '';
-        }
-    }
     .col-lg-11{
         height: 100vh;
         padding-left: 102px;
         overflow: hidden;
-        &::before{
-            animation: slide-up 0.8s ease forwards;
-            animation-delay: 0.1s;
-        }
-        &::after{
-            height: 100vh;
-            width: 1px;
-            background-color: rgba($white, 0.3);
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            content: '';
-            animation: slide-down 0.8s ease forwards;
-            animation-delay: 0.2s;
-        }
-    }
-    .col-lg-1{
-        &::before{
-            animation: slide-down 0.8s ease forwards;
-        }
     }
     .hero-content{
         height: 100vh;
@@ -257,6 +242,7 @@ header{
         display: flex;
         flex-direction: column;
         flex: 1;
+        filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.1));
         img{
             margin-bottom: 16px;
             height: 40px;
@@ -291,39 +277,97 @@ header{
         max-width: 370px;
         margin-bottom: 32px;
     }
-    .faq-container{
-        margin-bottom: 32px;
-        .faq-btn{
-            border-bottom: 1px solid rgba($gray-lightest, 0.4);
-            padding-right: 16px;
-            margin-bottom: 8px;
-            button{
-                padding: 0px;
-                background-color: transparent;
-                border: none;
-                font-family: $poppins;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 17px;
-                line-height: 120%;
-                color: rgba($black, 0.8);
-                outline: none;
-                width: 100%;
-                cursor: pointer;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+    .faq-accordion{
+        .card{
+            margin-bottom: 24px;
+            border: none;
+            background-color: transparent;
+            padding: 0px;
         }
-        .faq-content{
-            font-size: 14px;
-            line-height: 150%;
-            color: $black;
-            margin-bottom: 8px;
+        .card-header{
+            padding: 0px;
+            border: none;
+            box-shadow: none;
+            background-color: transparent;
+        }
+        .card-body{
+            padding: 16px;
+            padding-bottom: 0px;
+        }
+        button{
+            padding: 16px;
+            width: 100%;
+            background-color: rgba($brand-yellow, 1);
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            font-family: $poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 120%;
+            color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: 0.4s;
+            svg{
+                width: 14px;
+                height: 14px;
+            }
+            &.collapsed{
+                background-color: rgba($brand-yellow, 0.2);
+            }
+            &:hover{
+                background-color: $brand-yellow;
+                transition: 0.4s;
+            }
+
         }
     }
-    a{
+    .default-btn{
         margin-top: 48px;
+    }
+}
+
+//PARTNERS
+.partners{
+    margin-top: 80px;
+    .owl-carousel{
+        .owl-stage{
+            display: flex;
+            justify-content: center;
+        }
+        .owl-item{
+            max-width: 164px;
+        }
+        .owl-nav{
+            button{
+                background-color: #252363;
+                border-radius: 50%;
+                height: 28px;
+                width: 28px;
+                color: $white;
+            }
+        }
+    }
+    h2{
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 48px;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        line-height: 120%;
+        color: $gray-darkest;
+    }
+    img{
+        max-width: 124px;
+        height: auto;
+        object-fit: contain;
+    }
+    .resized-logo{
+        max-width: 164px;
     }
 }
 
@@ -336,9 +380,8 @@ footer{
     line-height: 150%;
     color: $gray-medium;
     background-color: #252363;
-    margin-top: 146px;
+    margin-top: 76px;
     padding-top: 88px;
-
     .early-access-card{
         padding: 0px 48px;
         height: 264px;
@@ -579,7 +622,7 @@ footer{
     }
 }
 
-@media(max-width: 981px){
+@media(max-width: 991px){
     .hero {
         .col-lg-11{
             padding-left: 15px;
@@ -621,11 +664,6 @@ footer{
         }
     }
     .faq{
-        #accordion{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
         .default-btn{
             max-width: -webkit-fit-content;
         }
@@ -633,15 +671,10 @@ footer{
             display: flex;
             justify-content: center;
         }
-        .faq-container{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            .faq-btn {
-                button {
-                    justify-content: center;
-                }
+        #accordion{
+            width: 100%;
+            .card{
+                width: 100%;
             }
         }
         .col-lg-5{
@@ -717,11 +750,6 @@ footer{
     }
     .faq{
         padding-top: 60px;
-        .faq-container {
-            .faq-btn {
-                padding-right: 0px;
-            }
-        }
     }
     #contact{
         padding-top: 60px;

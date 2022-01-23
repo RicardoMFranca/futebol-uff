@@ -53,7 +53,7 @@ a:hover {
 }
 
 body {
-  background-color: #F2F3FA;
+  background-color: #ffffff;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -215,8 +215,7 @@ h1, h2, h3 {
   }
 }
 header {
-  position: absolute;
-  top: 18px;
+  position: fixed;
   width: 100%;
   z-index: 2;
   display: flex;
@@ -226,8 +225,17 @@ header .container {
 }
 header .container .header-container {
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+header .container .header-container .nav-container {
+  width: 100%;
+  padding: 16px 0px;
+}
+header .container .header-container .nav-container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 header .container .header-container .nav-container nav li {
   display: inline-block;
@@ -243,6 +251,12 @@ header .container .header-container .nav-container nav li a {
   font-size: 18px;
   line-height: 100%;
   color: #FFFFFF;
+  transition: 0.4s;
+  cursor: pointer;
+}
+header .container .header-container .nav-container nav li a:hover {
+  opacity: 0.7;
+  transition: 0.4s;
 }
 header .container .header-container .subscribe {
   border: 1px solid #FFFFFF;
@@ -254,6 +268,12 @@ header .container .header-container .subscribe {
   line-height: 100%;
   color: #FFFFFF;
   transform: translateX(15px);
+  cursor: pointer;
+  transition: 0.4s;
+}
+header .container .header-container .subscribe:hover {
+  opacity: 0.7;
+  transition: 0.4s;
 }
 
 @keyframes slide-up {
@@ -283,39 +303,10 @@ header .container .header-container .subscribe {
 .hero .container, .hero .row {
   height: 100vh;
 }
-.hero .col-lg-11, .hero .col-lg-1 {
-  position: relative;
-}
-.hero .col-lg-11::before, .hero .col-lg-1::before {
-  height: 100vh;
-  width: 1px;
-  background-color: rgba(255, 255, 255, 0.3);
-  position: absolute;
-  left: 0px;
-  content: "";
-}
 .hero .col-lg-11 {
   height: 100vh;
   padding-left: 102px;
   overflow: hidden;
-}
-.hero .col-lg-11::before {
-  animation: slide-up 0.8s ease forwards;
-  animation-delay: 0.1s;
-}
-.hero .col-lg-11::after {
-  height: 100vh;
-  width: 1px;
-  background-color: rgba(255, 255, 255, 0.3);
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  content: "";
-  animation: slide-down 0.8s ease forwards;
-  animation-delay: 0.2s;
-}
-.hero .col-lg-1::before {
-  animation: slide-down 0.8s ease forwards;
 }
 .hero .hero-content {
   height: 100vh;
@@ -462,6 +453,7 @@ header .container .header-container .subscribe {
   display: flex;
   flex-direction: column;
   flex: 1;
+  filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.1));
 }
 .all-you-need .need-card img {
   margin-bottom: 16px;
@@ -495,39 +487,89 @@ header .container .header-container .subscribe {
   max-width: 370px;
   margin-bottom: 32px;
 }
-.faq .faq-container {
-  margin-bottom: 32px;
-}
-.faq .faq-container .faq-btn {
-  border-bottom: 1px solid rgba(242, 243, 250, 0.4);
-  padding-right: 16px;
-  margin-bottom: 8px;
-}
-.faq .faq-container .faq-btn button {
-  padding: 0px;
-  background-color: transparent;
+.faq .faq-accordion .card {
+  margin-bottom: 24px;
   border: none;
+  background-color: transparent;
+  padding: 0px;
+}
+.faq .faq-accordion .card-header {
+  padding: 0px;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+.faq .faq-accordion .card-body {
+  padding: 16px;
+  padding-bottom: 0px;
+}
+.faq .faq-accordion button {
+  padding: 16px;
+  width: 100%;
+  background-color: #ffc44a;
+  outline: none;
+  border: none;
+  border-radius: 8px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 120%;
   color: rgba(0, 0, 0, 0.8);
-  outline: none;
-  width: 100%;
-  cursor: pointer;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  transition: 0.4s;
 }
-.faq .faq-container .faq-content {
-  font-size: 14px;
-  line-height: 150%;
-  color: #000000;
-  margin-bottom: 8px;
+.faq .faq-accordion button svg {
+  width: 14px;
+  height: 14px;
 }
-.faq a {
+.faq .faq-accordion button.collapsed {
+  background-color: rgba(255, 196, 74, 0.2);
+}
+.faq .faq-accordion button:hover {
+  background-color: #FFC44A;
+  transition: 0.4s;
+}
+.faq .default-btn {
   margin-top: 48px;
+}
+
+.partners {
+  margin-top: 80px;
+}
+.partners .owl-carousel .owl-stage {
+  display: flex;
+  justify-content: center;
+}
+.partners .owl-carousel .owl-item {
+  max-width: 164px;
+}
+.partners .owl-carousel .owl-nav button {
+  background-color: #252363;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  color: #FFFFFF;
+}
+.partners h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 48px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  line-height: 120%;
+  color: #1E1F1F;
+}
+.partners img {
+  max-width: 124px;
+  height: auto;
+  object-fit: contain;
+}
+.partners .resized-logo {
+  max-width: 164px;
 }
 
 footer {
@@ -538,7 +580,7 @@ footer {
   line-height: 150%;
   color: #808485;
   background-color: #252363;
-  margin-top: 146px;
+  margin-top: 76px;
   padding-top: 88px;
 }
 footer .early-access-card {
@@ -776,7 +818,7 @@ footer .footer-container h3 {
   bottom: 44px;
 }
 
-@media (max-width: 981px) {
+@media (max-width: 991px) {
   .hero .col-lg-11 {
     padding-left: 15px;
   }
@@ -814,11 +856,6 @@ footer .footer-container h3 {
     margin-bottom: 24px;
   }
 
-  .faq #accordion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .faq .default-btn {
     max-width: -webkit-fit-content;
   }
@@ -826,14 +863,11 @@ footer .footer-container h3 {
     display: flex;
     justify-content: center;
   }
-  .faq .faq-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+  .faq #accordion {
+    width: 100%;
   }
-  .faq .faq-container .faq-btn button {
-    justify-content: center;
+  .faq #accordion .card {
+    width: 100%;
   }
   .faq .col-lg-5 {
     display: flex;
@@ -895,9 +929,6 @@ footer .footer-container h3 {
 
   .faq {
     padding-top: 60px;
-  }
-  .faq .faq-container .faq-btn {
-    padding-right: 0px;
   }
 
   #contact {

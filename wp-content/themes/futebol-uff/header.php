@@ -34,6 +34,7 @@
                   <a class="faq-btn">FAQ</a>
                 </li>
               </ul>
+              <a class="subscribe contact-btn">Inscreva-se</a>
             </nav>
           </div>
         </div>

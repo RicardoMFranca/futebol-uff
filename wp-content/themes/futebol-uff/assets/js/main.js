@@ -15,15 +15,15 @@ $('.input-container').on("click", function(){
   if($('.focused')){
     $(".input-container").removeClass("focused");
     $(current).addClass("focused");
-    $(current).find('input').focus();
+    $(current).find('input').on('focus');
   }
 })
 
-$(window).click(function() {
+$(window).on('click', function() {
   $(".input-container").removeClass("focused");
 });
 
-$('.input-container').click(function(event){
+$('.input-container').on('click', function(event){
   event.stopPropagation();
 });
 
@@ -31,7 +31,7 @@ $('.input-container').click(function(event){
 //FIM DO FORMULARIO DE CONTATO
 
 //ANIMAÇÃO DA SECAO "PARA O SEU FILHO"
-$(window).scroll(function() {
+$(window).on('scroll', function() {
   var scrolled_top = $(window).scrollTop(); 
   var blog = $(".about");
   var blog_top_position = Math.round(blog.offset().top);
@@ -43,8 +43,7 @@ $(window).scroll(function() {
 
 //SCROLL PARA ELEMENTO
 function scroll_to_div(btn, target){
-  $(`.${btn}`).click(function() {
-    console.log("scroll")
+  $(`.${btn}`).on('click', function() {
     $('html, body').animate({
         scrollTop: $(`#${target}`).offset().top
     }, 400);
@@ -58,5 +57,34 @@ scroll_to_div("subscribe","contact");
 scroll_to_div("default-btn","contact");
 scroll_to_div("contact-btn","contact");
 
-
 //FIM DA ANIMAÇÃO
+
+//ACCORDION FAQ
+$("#accordion").on("hide.bs.collapse show.bs.collapse", e => {
+  $(e.target)
+    .prev()
+    .find("svg:last-child")
+    .toggleClass("fa-minus fa-plus");
+});
+//FIM DO ACCORDION
+
+//PARTNERS CAROUSEL
+$('.owl-carousel').owlCarousel({
+  loop:false,
+  margin: 40,
+  nav:true,
+  dots: false,
+  navText : ["<i class='fa fa-arrow-left'></i>","<i class='fa fa-arrow-right'></i>"],
+  responsive:{
+      0:{
+          items:2
+      },
+      600:{
+        items:3
+      },
+      1000:{
+          items:4
+      }
+  }
+})
+//FIM DO CAROUSEL
