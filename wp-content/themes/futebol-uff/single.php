@@ -1,6 +1,4 @@
 <?php
-	get_header();
-
 	$args_posts = array(
 		"post_type" => "aluno",
 		'posts_per_page' => 4,
@@ -37,5 +35,3 @@
     </div>
   </section>
 </div>
-
-<?php get_footer();?>

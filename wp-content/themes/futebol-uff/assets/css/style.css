@@ -215,10 +215,11 @@ h1, h2, h3 {
   }
 }
 header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 2;
   display: flex;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 header .container {
   position: relative;
@@ -240,6 +241,11 @@ header .container .header-container .nav-container nav {
 header .container .header-container .nav-container nav li {
   display: inline-block;
   margin-right: 40px;
+  transition: 0.4s;
+}
+header .container .header-container .nav-container nav li:hover {
+  transform: translateY(-4px);
+  transition: 0.4s;
 }
 header .container .header-container .nav-container nav li:last-child {
   margin-right: 0px;
@@ -552,6 +558,7 @@ header .container .header-container .subscribe:hover {
   height: 28px;
   width: 28px;
   color: #FFFFFF;
+  outline: none;
 }
 .partners h2 {
   font-size: 24px;
@@ -819,6 +826,13 @@ footer .footer-container h3 {
 }
 
 @media (max-width: 991px) {
+  header .container .header-container .nav-container nav {
+    justify-content: center;
+  }
+  header .container .header-container .subscribe {
+    display: none;
+  }
+
   .hero .col-lg-11 {
     padding-left: 15px;
   }
@@ -894,6 +908,13 @@ footer .footer-container h3 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .partners .owl-carousel .owl-nav button {
+    outline: none;
+  }
+  .partners .owl-carousel .owl-nav button:hover {
+    background-color: #252363;
   }
 }
 @media (max-width: 678px) {

@@ -15,6 +15,13 @@ function wpb_set_post_views($postID) {
         update_post_meta($postID, $count_key, $count);
     }
 }
+
+function meutema_limpa_titulo( $titulo ) {
+    return '%s';
+}
+add_filter( 'private_title_format', 'meutema_limpa_titulo' );
+add_filter( 'protected_title_format', 'meutema_limpa_titulo' );
+
 //To keep the count accurate, lets get rid of prefetching
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
@@ -27,3 +34,4 @@ function wpb_track_post_views ($post_id) {
     wpb_set_post_views($post_id);
 }
 add_action( 'wp_head', 'wpb_track_post_views');
+
