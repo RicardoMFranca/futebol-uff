@@ -627,6 +627,53 @@ footer{
         left: calc(50% + 38px);
         bottom: 44px;
     }
+    .wpcf7-radio {
+        display: flex;
+        .wpcf7-list-item {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            margin: 0px;
+            &.last {
+                margin-left: 12px;
+            }
+            input {
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+                border: none;
+                position: relative;
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    border-radius: 50%;
+                    background-color: $white;
+                    cursor: pointer;
+                }
+                &::before {
+                    height: 22px;
+                    width: 22px;
+                    left: -1px;
+                    top: -1px;
+                }
+                &::after {
+                    height: 14px;
+                    width: 14px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: 0.4s;
+                }
+                &:checked {
+                    &::after {
+                        background-color: $brand-yellow;
+                        transition: 0.4s;
+                    }
+                }
+            }
+        }
+
+    }
 }
 
 @media(max-width: 991px){
