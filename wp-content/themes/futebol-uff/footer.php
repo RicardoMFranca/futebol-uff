@@ -41,6 +41,21 @@
             </div>
         </div>
     </div>
+    <div class="loader">
+        <div class="ball-container">
+            <div class="shadow"></div>
+            <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/ball.png" alt="" >
+        </div>
+        <div class="ball-container">
+            <div class="shadow"></div>
+            <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/ball.png" alt="" >
+        </div>
+        <div class="ball-container">
+            <div class="shadow"></div>
+            <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/ball.png" alt="" >
+        </div>
+    </div>
+    
     <script src="<?php echo get_stylesheet_directory_uri()?>/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri()?>/assets/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/19290a9456.js" crossorigin="anonymous"></script>

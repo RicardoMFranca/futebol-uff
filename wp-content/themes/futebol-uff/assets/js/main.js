@@ -1,6 +1,7 @@
 
 //ANIMAÇÃO DO LOADER 
 window.onload = function() {
+  $('.loader').fadeOut();
   AOS.init({
     duration: 600,
     once: "true",
