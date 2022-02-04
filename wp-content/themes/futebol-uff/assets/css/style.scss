@@ -529,6 +529,69 @@ footer{
         }
     }
 }
+#success-modal {
+    .modal-dialog {
+        max-width: 650px;
+    }
+    .modal-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background-color: $brand-yellow;
+        border: none;
+        padding: 40px 16px;
+        .row {
+            width: 100%;
+        }
+        button {
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            font-size: 32px;
+            color: $white;
+            padding: 0px;
+            opacity: 1;
+            transition: 0.4s;
+            &:hover {
+                opacity: 0.7;
+                transition: 0.4s;
+            }
+        }
+        .default-btn {
+            background-color: $brand-blue;
+            color: $white;
+        }
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 120%;
+            display: flex;
+            align-items: center;
+            color: $white;
+            margin-bottom: 8px;
+        }
+        p {
+            font-family: $inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 130%;
+            color: $white;
+            margin-bottom: 32px;
+        }
+        .col-md-6{
+            &:first-child {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 32px;
+            }
+        }
+    }
+}
+
 .contact{
     display: flex;
     justify-content: center;
@@ -841,6 +904,23 @@ footer{
             text-align: center;
         }
     } 
+    #success-modal {
+        .modal-content {
+            text-align: center;
+            br{
+                display: none;
+            }
+            h2{
+                text-align: center;
+            }
+            .col-md-6 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0px;
+            }
+        }
+    }
     .partners{
         .owl-carousel{
             .owl-nav{

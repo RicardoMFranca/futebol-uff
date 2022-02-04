@@ -30,12 +30,12 @@
                 </button>
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/success-modal.png" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/success.png" alt="" class="img-fluid mx-auto">
                     </div>
-                    <div class="col-md-6">
-                        <h2>Cadastro feito com sucesso!</h2>
-                        <p>Em breve entraremos em contato para você baixar o nosso app!</p>
-                        <a class="default-btn" href="<?= site_url(); ?>" >Voltar para o site</a>
+                    <div class="col-md-6 my-auto">
+                        <h2>Pré-matrícula <br>feita com sucesso!</h2>
+                        <p>Em breve entraremos em contato<br>para informar sobre a matrícula presencial!</p>
+                        <a class="default-btn" href="https://www.instagram.com/uffutebolnacional/" target="blank">Visite Nosso Instagram</a>
                     </div>
                 </div>
             </div>
