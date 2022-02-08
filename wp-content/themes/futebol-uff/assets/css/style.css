@@ -238,6 +238,13 @@ header .container .header-container .nav-container nav {
   align-items: center;
   width: 100%;
 }
+header .container .header-container .nav-container nav ul {
+  display: flex;
+  align-items: center;
+}
+header .container .header-container .nav-container nav ul .logo-container {
+  margin-right: 40px;
+}
 header .container .header-container .nav-container nav li {
   display: inline-block;
   margin-right: 40px;
@@ -322,13 +329,15 @@ header .container .header-container .subscribe:hover {
 }
 .hero .hero-content h1 {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 56px;
   line-height: 120%;
-  text-transform: uppercase;
   color: #FFFFFF;
-  max-width: 536px;
+  max-width: 570px;
   margin-bottom: 16px;
+}
+.hero .hero-content h1 span {
+  color: #FFC44A;
 }
 .hero .hero-content p {
   font-family: "Archivo", sans-serif;
@@ -338,19 +347,23 @@ header .container .header-container .subscribe:hover {
   line-height: 120%;
   text-transform: lowercase;
   color: rgba(255, 255, 255, 0.7);
-  max-width: 486px;
+  max-width: 310px;
   margin-bottom: 32px;
 }
 
 .about {
   padding-top: 112px;
 }
+.about span {
+  color: #FFC44A;
+  font-weight: bold;
+}
 .about h2 {
   font-weight: 600;
   font-size: 32px;
   line-height: 120%;
   color: #1E1F1F;
-  max-width: 370px;
+  max-width: 360px;
   margin-bottom: 24px;
   position: relative;
 }
@@ -359,7 +372,7 @@ header .container .header-container .subscribe:hover {
   height: 32px;
   object-fit: contain;
   position: absolute;
-  left: 200px;
+  left: 320px;
   opacity: 0;
   transition: 0.4s;
   transform: rotate(45deg);
@@ -509,6 +522,14 @@ header .container .header-container .subscribe:hover {
   padding: 16px;
   padding-bottom: 0px;
 }
+.faq .faq-accordion .card-body p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #4F5152;
+}
 .faq .faq-accordion button {
   padding: 16px;
   width: 100%;
@@ -526,10 +547,12 @@ header .container .header-container .subscribe:hover {
   align-items: center;
   justify-content: space-between;
   transition: 0.4s;
+  text-align: left;
 }
 .faq .faq-accordion button svg {
   width: 14px;
   height: 14px;
+  margin-left: 8px;
 }
 .faq .faq-accordion button.collapsed {
   background-color: rgba(255, 196, 74, 0.2);
@@ -991,6 +1014,9 @@ footer .footer-container h3 {
   }
 }
 @media (max-width: 991px) {
+  header .container .header-container .nav-container .logo-container {
+    display: none;
+  }
   header .container .header-container .nav-container nav {
     justify-content: center;
   }
@@ -1027,9 +1053,6 @@ footer .footer-container h3 {
     flex-direction: column;
     align-items: center;
   }
-  .about h2 img {
-    left: 290px;
-  }
 
   .all-you-need .need-card {
     margin-bottom: 24px;
@@ -1056,6 +1079,10 @@ footer .footer-container h3 {
   .faq h2 {
     text-align: center;
     margin-top: 32px;
+    font-size: 28px;
+  }
+  .faq .default-btn {
+    margin-top: 24px;
   }
 
   #contact {
@@ -1121,12 +1148,12 @@ footer .footer-container h3 {
   }
 
   .about h2 {
-    font-size: 28px;
+    font-size: 25px;
   }
   .about h2 img {
-    width: 28px;
-    height: 28px;
-    left: 260px;
+    width: 24px;
+    height: 24px;
+    left: 250px;
   }
 
   .faq {

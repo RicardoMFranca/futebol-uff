@@ -30,6 +30,13 @@ header{
                     justify-content: space-between;
                     align-items: center;
                     width: 100%;
+                    ul {
+                        display: flex;
+                        align-items: center;
+                       .logo-container {
+                           margin-right: 40px;
+                       }
+                    }
                     li{
                         display: inline-block;
                         margin-right: 40px;
@@ -117,13 +124,15 @@ header{
         justify-content: center;
         h1{
             font-family: 'Poppins', sans-serif;
-            font-weight: 500;
+            font-weight: 700;
             font-size: 56px;
             line-height: 120%;
-            text-transform: uppercase;
             color: $white;
-            max-width: 536px;
+            max-width: 570px;
             margin-bottom: 16px;
+            span {
+                color: $brand-yellow;
+            }
         }
         p{
             font-family: 'Archivo', sans-serif;
@@ -133,7 +142,7 @@ header{
             line-height: 120%;
             text-transform: lowercase;
             color: rgba($white, 0.7);
-            max-width: 486px;
+            max-width: 310px;
             margin-bottom: 32px;
         }
     }
@@ -141,12 +150,16 @@ header{
 
 .about{
     padding-top: 112px;
+    span {
+        color: $brand-yellow;
+        font-weight: bold;
+    }
     h2{
         font-weight: 600;
         font-size: 32px;
         line-height: 120%;
         color: $gray-darkest;
-        max-width: 370px;
+        max-width: 360px;
         margin-bottom: 24px;
         position: relative;
         img{
@@ -154,7 +167,7 @@ header{
             height: 32px;
             object-fit: contain;
             position: absolute;
-            left: 200px;
+            left: 320px;
             opacity: 0;
             transition: 0.4s;
             transform: rotate(45deg);
@@ -299,6 +312,14 @@ header{
         .card-body{
             padding: 16px;
             padding-bottom: 0px;
+            p {
+                font-family: $inter;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 150%;
+                color: $gray-dark;
+            }
         }
         button{
             padding: 16px;
@@ -317,9 +338,11 @@ header{
             align-items: center;
             justify-content: space-between;
             transition: 0.4s;
+            text-align: left;
             svg{
                 width: 14px;
                 height: 14px;
+                margin-left: 8px;
             }
             &.collapsed{
                 background-color: rgba($brand-yellow, 0.2);
@@ -814,6 +837,9 @@ footer{
         .container {
             .header-container {
                 .nav-container{
+                    .logo-container {
+                        display: none;
+                    }
                     nav{
                         justify-content: center;
                     }
@@ -853,11 +879,6 @@ footer{
             flex-direction: column;
             align-items: center;
         }
-        h2{
-            img{
-                left: 290px;
-            }
-        }
     }
     .all-you-need {
         .need-card {
@@ -886,6 +907,10 @@ footer{
         h2{
             text-align: center;
             margin-top: 32px;
+            font-size: 28px;
+        }
+        .default-btn {
+            margin-top: 24px;
         }
     }
     #contact {
@@ -970,11 +995,11 @@ footer{
     }
     .about {
         h2 {
-            font-size: 28px;
+            font-size: 25px;
             img{
-                width: 28px;
-                height: 28px;
-                left: 260px;
+                width: 24px;
+                height: 24px;
+                left: 250px;
             }
         }
     }
