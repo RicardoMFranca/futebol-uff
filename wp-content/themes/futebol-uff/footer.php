@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-md-6 my-auto">
                         <h2>Pré-matrícula <br>feita com sucesso!</h2>
-                        <p>Em breve entraremos em contato<br>para informar sobre a matrícula presencial!</p>
+                        <p>Em breve entraremos em contato <br>para informar sobre a matrícula presencial!</p>
                         <a class="default-btn" href="https://www.instagram.com/uffutebolnacional/" target="blank">Visite Nosso Instagram</a>
                     </div>
                 </div>

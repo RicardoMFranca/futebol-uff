@@ -1,4 +1,9 @@
 <?php 
+    $faq = new WP_Query( array(
+        'post_type' => 'faq',
+        'order' => 'ASC',
+        'posts_per_page' => 3,
+    ));
     get_header();
 ?>
     <section class="hero">
@@ -75,46 +80,27 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1 my-auto">
                     <h2>Perguntas frequentes.</h2>
+
                     <div id="accordion" class="faq-accordion">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    1. Este projeto é pago ?
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
-                                <div class="card-body">
-                                    <p>Não! O projeto é 100% gratuito, livre de qualquer mensalidade ou taxa. O projeto inclui também a distribuição de uniformes gratuitamente.</p>
+                        <?php 
+                            $index = 0;
+                            if( $faq->have_posts() ) : while ( $faq->have_posts() ) : $faq->the_post(); 
+                            $index++
+                        ?>
+                            <div class="card">
+                                <div class="card-header" id="heading-<?= $index ?>">
+                                    <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapse-<?= $index ?>" aria-expanded="false" aria-controls="collapse-<?= $index ?>">
+                                        <?= "$index. "; the_title(); ?>
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div id="collapse-<?= $index ?>" class="collapse" aria-labelledby="heading-<?= $index ?>">
+                                    <div class="card-body">
+                                        <p><?= get_field('resposta')?></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    2. Quais são os dias e horários do projeto?
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
-                                <div class="card-body">
-                                    <p>O projeto funciona todas as segundas, quartas e sextas, no turno da manhã e da tarde.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    3. Qual é a faixa etária? 
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
-                                <div class="card-body">
-                                   <p>A faixa etária é de 6 a 16 anos.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endwhile; endif; wp_reset_postdata(); ?>
                     </div>
                     <button class="default-btn">Entrar na fila de espera</button>
                 </div>
