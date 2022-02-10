@@ -56,7 +56,6 @@ window.onload = function() {
   scroll_to_div("about-btn","about");
   scroll_to_div("hero-scroll","about");
   scroll_to_div("subscribe","contact");
-  scroll_to_div("default-btn","contact");
   scroll_to_div("contact-btn","contact");
 
   //FIM DA ANIMAÇÃO

@@ -221,6 +221,10 @@ header {
   display: flex;
   background-color: rgba(0, 0, 0, 0.2);
 }
+header.relative-header {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 header .container {
   position: relative;
 }
@@ -563,6 +567,14 @@ header .container .header-container .subscribe:hover {
 }
 .faq .default-btn {
   margin-top: 48px;
+  min-width: 160px;
+  text-align: center;
+}
+.faq.faq-screen {
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .partners {

@@ -102,7 +102,7 @@
                             </div>
                         <?php endwhile; endif; wp_reset_postdata(); ?>
                     </div>
-                    <button class="default-btn">Entrar na fila de espera</button>
+                    <a class="default-btn" href="<?= site_url()?>/faq">Ver mais</a>
                 </div>
             </div>
         </div>

@@ -16,19 +16,19 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <header>
+    <header class="<?php if (is_page_template(array('faq.php'))):?>relative-header<?php endif;?>">
       <div class="container">
         <div class="header-container">
           <div class="nav-container">
             <nav>
               <ul>
-                <a class="logo-container"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/logo.png" alt="Logo do projeto UFFutebol Nacional" ></a>
+                <a class="logo-container" href="<?= site_url()?>"><img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/logo.png" alt="Logo do projeto UFFutebol Nacional" ></a>
                 <li>
                   <a class="contact-btn">Contato</a>
                 </li>
-                <li>
-                  <a class="about-btn">Quem somos</a>
-                </li>
+                  <li>
+                    <a class="about-btn" href="<?php if (is_page_template(array('faq.php'))):?><?= site_url()?>/#about<?php endif;?>">Quem somos</a>
+                  </li>
                 <li>
                   <a class="faq-btn">FAQ</a>
                 </li>
