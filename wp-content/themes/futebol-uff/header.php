@@ -16,7 +16,7 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <header class="<?php if (is_page_template(array('faq.php'))):?>relative-header<?php endif;?>">
+    <header class="<?php if (!is_home()):?>relative-header<?php endif;?>">
       <div class="container">
         <div class="header-container">
           <div class="nav-container">
