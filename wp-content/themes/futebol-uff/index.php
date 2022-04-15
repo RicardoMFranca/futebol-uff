@@ -1,4 +1,9 @@
 <?php 
+    $faq = new WP_Query( array(
+        'post_type' => 'faq',
+        'order' => 'ASC',
+        'posts_per_page' => 3,
+    ));
     get_header();
 ?>
     <section class="hero">
@@ -6,10 +11,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="hero-content">
-                        <h1 data-aos="fade-right">Aqui um título de até três linhas em caixa alta </h1>
-                        <p data-aos="fade-right" data-aos-delay="200">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum gravida nascetur proin libero, elementum .</p>
+                        <h1 data-aos="fade-right"><span>UFFutebol nacional</span> Inclusão Social e Cidadania.</h1>
+                        <p data-aos="fade-right" data-aos-delay="200">Pratique futebol 100% gratuito em um projeto que acontece desde 1993.</p>
                         <div data-aos="fade-right" data-aos-delay="300">
-                            <button class="default-btn">Participe do projeto</button>
+                            <button class="default-btn be-part">Participe do projeto</button>
                         </div>
                     </div>
                 </div>
@@ -25,15 +30,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 my-auto">
-                    <h2>Aqui um título de até duas linhas <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/ball.png" alt="" ></h2>
-                    <p>Aqui um breve texto divido em 3 parágrafos.</p>
-                    <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has.</p>
-                    <p>been the industry's standard dummy text ever since the 1500s,.</p>
-                    <button class="default-btn">Entrar na fila de espera</button>
+                    <h2>Saiba mais sobre <br>o projeto <span>UFFutebol</span> <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/ball.png" alt="Foto de uma bola de futebol em miniatura" ></h2>
+                    <p>O projeto contribuiu com a formação de mais de <span>3000</span> <strong>crianças</strong> e <strong>adolescentes.</strong></p>
+                    <p>O futebol como instrumentro para melhoria da qualidade de vida.</p>
+                    <p>Este trabalho tem como objetivo fomentar e estimular a prática esportiva.</p>
+                    <button class="default-btn get-into-queue">Entrar na fila de espera</button>
                 </div>
                 <div class="col-lg-7">
                     <div class="futbol-img-container">
-                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/about-image.png" alt="" class="img-fluid">
+                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/about-image.png" alt="Garotas jogando futebol." class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -41,27 +46,27 @@
     </section>
     <section class="all-you-need" id="all-you-need">
         <div class="container">
-            <h2>Aqui um titulo da secao</h2>
+            <h2>Metodologias</h2>
             <div class="row">
                 <div class="col-lg-4" data-aos="fade-down">
                     <div class="need-card">
-                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/notification-icon.jpg" alt="" class="img-fluid">
-                        <h3>Título de uma linha</h3>
-                        <p>Simply dummy text of the printing and typesetting industry.</p>
+                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/couple.svg" alt="icone de um casal" class="img-fluid">
+                        <h3>Futebol misto</h3>
+                        <p>Garantindo o direito de participação de meninos e meninas.</p>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="need-card">
-                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/menu-icon.jpg" alt="" class="img-fluid">
-                        <h3>Título de uma linha</h3>
-                        <p>Simply dummy text of the printing and typesetting industry.</p>
+                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/trophy.svg" alt="icone de um troféu" class="img-fluid">
+                        <h3>Torneios</h3>
+                        <p>Participação dos alunos em jogos amistosos e campeonatos.</p>
                     </div>
                 </div>
                 <div class="col-lg-4" data-aos="fade-down" data-aos-delay="400">
                     <div class="need-card">
-                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/menu-icon.jpg" alt="" class="img-fluid">
-                        <h3>Título de uma linha</h3>
-                        <p>Simply dummy text of the printing and typesetting industry.</p>
+                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/exchange.svg" alt="icone de duas setas simbolizando uma troca" class="img-fluid">
+                        <h3>Intercâmbio</h3>
+                        <p>Participação em torneios comunitários e escolas públicas.</p>
                     </div>
                 </div>
             </div>
@@ -71,52 +76,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/faq.png" alt="" class="img-fluid">
+                    <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/faq.png" alt="Fotos de torneios de futebol." class="img-fluid">
                 </div>
                 <div class="col-lg-5 offset-lg-1 my-auto">
-                    <h2>Aqui um título de até duas linhas </h2>
+                    <h2>Perguntas frequentes.</h2>
+
                     <div id="accordion" class="faq-accordion">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    1. Pergunta frequentemente feita. 
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
-                                <div class="card-body">
-                                    <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has. been the industry's standard dummy text ever since the</p>
+                        <?php 
+                            $index = 0;
+                            if( $faq->have_posts() ) : while ( $faq->have_posts() ) : $faq->the_post(); 
+                            $index++
+                        ?>
+                            <div class="card">
+                                <div class="card-header" id="heading-<?= $index ?>">
+                                    <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapse-<?= $index ?>" aria-expanded="false" aria-controls="collapse-<?= $index ?>">
+                                        <?= "$index. "; the_title(); ?>
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div id="collapse-<?= $index ?>" class="collapse" aria-labelledby="heading-<?= $index ?>">
+                                    <div class="card-body">
+                                        <p><?= get_field('resposta')?></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    2. Pergunta frequentemente feita. 
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
-                                <div class="card-body">
-                                    <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has. been the industry's standard dummy text ever since the</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <button class="d-flex collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    3. Pergunta frequentemente feita. 
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
-                                <div class="card-body">
-                                   <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has. been the industry's standard dummy text ever since the</p>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endwhile; endif; wp_reset_postdata(); ?>
                     </div>
-                    <button class="default-btn">Entrar na fila de espera</button>
+                    <a class="default-btn" href="<?= site_url()?>/faq">Ver mais</a>
                 </div>
             </div>
         </div>
@@ -125,10 +111,10 @@
         <div class="container">
             <h2>Em parceria com</h2>
             <div class="owl-carousel owl-theme">
-                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/uff-logo.png" alt="" >
-                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/governo-federal.png" alt="" >
-                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/ministerio-da-cidadania.png" alt="" >
-                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/secretaria-especial-do-esporte.png" alt="" class="resized-logo">
+                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/uff-logo.png" alt="Logo da Universidade Fededral Fluminense" >
+                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/governo-federal.png" alt="Logo do Governo Federal" >
+                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/ministerio-da-cidadania.png" alt="Logo do Ministério da Cidadania" >
+                <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/partners/secretaria-especial-do-esporte.png" alt="Logo da Secretaria Especial do Esporte" class="resized-logo">
             </div>
         </div>
     </section>

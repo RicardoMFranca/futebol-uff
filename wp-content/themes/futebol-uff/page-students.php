@@ -4,7 +4,6 @@
         'post_type' => 'aluno',
         'posts_per_page' => -1,
     ) );
-
 ?>
 <section class="">
     <div class="col-md-9">
