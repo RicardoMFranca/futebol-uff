@@ -15,58 +15,65 @@ msgstr ""
 msgid "Integration with External API"
 msgstr "Integração com API externa"
 
-#: modules/sendinblue/contact-form-properties.php:281
+#: modules/sendinblue/contact-form-properties.php:288
 msgid "Manage your email templates"
 msgstr "Gerencie seus modelos de e-mail"
 
-#: modules/sendinblue/contact-form-properties.php:266
+#: modules/sendinblue/contact-form-properties.php:273
 msgid "You have no active email template yet."
 msgstr "Você ainda não tem um modelo de e-mail ativo."
 
-#: modules/sendinblue/contact-form-properties.php:246
+#: modules/sendinblue/contact-form-properties.php:253
 msgid "&mdash; Select &mdash;"
 msgstr "&mdash; Selecionar &mdash;"
 
-#: modules/sendinblue/contact-form-properties.php:233
+#: modules/sendinblue/contact-form-properties.php:240
 msgid "Select an email template:"
 msgstr "Selecione um modelo de e-mail:"
 
-#: modules/sendinblue/contact-form-properties.php:216
+#: modules/sendinblue/contact-form-properties.php:223
 msgid "Send a welcome email to new contacts"
 msgstr "Envie um e-mail de boas-vindas para novos contatos"
 
-#: modules/sendinblue/contact-form-properties.php:198
-#: modules/sendinblue/contact-form-properties.php:207
+#: modules/sendinblue/contact-form-properties.php:205
+#: modules/sendinblue/contact-form-properties.php:214
 msgid "Welcome email"
 msgstr "E-mail de boas-vindas"
 
-#: modules/sendinblue/contact-form-properties.php:188
-#: modules/sendinblue/contact-form-properties.php:282
+#: modules/constant-contact/contact-form-properties.php:267
+#: modules/sendinblue/contact-form-properties.php:195
+#: modules/sendinblue/contact-form-properties.php:289
 msgid "(opens in a new tab)"
 msgstr "(abre em uma nova aba)"
 
-#: modules/sendinblue/contact-form-properties.php:187
+#: modules/constant-contact/contact-form-properties.php:266
+#: modules/sendinblue/contact-form-properties.php:194
 msgid "Manage your contact lists"
 msgstr "Gerencie suas listas de contatos"
 
-#: modules/sendinblue/contact-form-properties.php:172
+#: modules/constant-contact/contact-form-properties.php:251
+#: modules/sendinblue/contact-form-properties.php:179
 msgid "You have no contact list yet."
 msgstr "Você ainda não tem nenhuma lista de contatos."
 
-#: modules/sendinblue/contact-form-properties.php:148
+#: modules/constant-contact/contact-form-properties.php:227
+#: modules/sendinblue/contact-form-properties.php:155
 msgid "Select lists to which contacts are added:"
 msgstr "Selecione as listas às quais os contatos são adicionados"
 
-#: modules/sendinblue/contact-form-properties.php:131
+#: modules/constant-contact/contact-form-properties.php:210
+#: modules/sendinblue/contact-form-properties.php:138
 msgid "Add form submitters to your contact lists"
 msgstr "Adicione os remetentes do formulário às suas listas de contatos"
 
-#: modules/sendinblue/contact-form-properties.php:113
-#: modules/sendinblue/contact-form-properties.php:122
+#: modules/constant-contact/contact-form-properties.php:192
+#: modules/constant-contact/contact-form-properties.php:201
+#: modules/sendinblue/contact-form-properties.php:120
+#: modules/sendinblue/contact-form-properties.php:129
 msgid "Contact lists"
 msgstr "Listas de contato"
 
-#: modules/sendinblue/contact-form-properties.php:90
+#: modules/sendinblue/contact-form-properties.php:97
 msgid "You can set up the Sendinblue integration here. For details, see %s."
 msgstr "Você pode configurar a integração do Sendinblue aqui. Para mais detalhes, veja %s."
 
@@ -91,13 +98,13 @@ msgstr "Configurar integração"
 msgid "Sendinblue is active on this site."
 msgstr "Sendinblue está ativo neste site."
 
-#: modules/sendinblue/contact-form-properties.php:94
+#: modules/sendinblue/contact-form-properties.php:101
 #: modules/sendinblue/service.php:151
 msgid "Sendinblue integration"
 msgstr "Integração Sendinblue"
 
 #: admin/includes/welcome-panel.php:152
-#: modules/sendinblue/contact-form-properties.php:93
+#: modules/sendinblue/contact-form-properties.php:100
 #: modules/sendinblue/service.php:150
 msgid "https://contactform7.com/sendinblue-integration/"
 msgstr "https://contactform7.com/sendinblue-integration/"
@@ -111,8 +118,8 @@ msgid "You have not been authenticated. Make sure the provided API key is correc
 msgstr "Você não está autenticado. Confirme se a chave API fornecida está correta."
 
 #: admin/includes/welcome-panel.php:153
-#: modules/sendinblue/contact-form-properties.php:102
-#: modules/sendinblue/contact-form-properties.php:296
+#: modules/sendinblue/contact-form-properties.php:109
+#: modules/sendinblue/contact-form-properties.php:303
 #: modules/sendinblue/service.php:30
 msgid "Sendinblue"
 msgstr "Sendinblue"
@@ -157,12 +164,12 @@ msgstr "Não encontrado"
 
 #. translators: Developer debugging message. 1: PHP function name, 2:
 #. Explanatory message, 3: Contact Form 7 version number.
-#: includes/functions.php:583
+#: includes/functions.php:607
 msgid "%1$s was called incorrectly. %2$s %3$s"
 msgstr "%1$s foi chamado incorretamente. %2$s %3$s"
 
 #. translators: %s: Contact Form 7 version number.
-#: includes/functions.php:575
+#: includes/functions.php:599
 msgid "(This message was added in Contact Form 7 version %s.)"
 msgstr "(Esta mensagem foi adicionada no Contact Form 7 versão %s.)"
 
@@ -195,7 +202,7 @@ msgstr "%1$s e %2$s"
 msgid "Additional settings"
 msgstr "Configurações adicionais"
 
-#: modules/constant-contact.php:479 modules/recaptcha/recaptcha.php:444
+#: modules/constant-contact/service.php:311 modules/recaptcha/recaptcha.php:444
 #: modules/sendinblue/service.php:125 modules/sendinblue/service.php:133
 #: modules/stripe/service.php:142
 msgid "Error"
@@ -233,43 +240,29 @@ msgstr "Pontuação do reCAPTCHA (%1$.2f) é inferior ao limiar (%2$.2f)."
 msgid "Akismet returns a spam response."
 msgstr "O Akismet retorna uma resposta de spam."
 
-#: modules/constant-contact.php:601
-msgid "Select lists to which newly added contacts are to belong."
-msgstr "Selecione listas às quais os contatos recém-adicionados devem pertencer."
-
-#: modules/constant-contact.php:600
-msgctxt "Constant Contact"
-msgid "Contact Lists: Select lists to which newly added contacts are to belong."
-msgstr "Listas de contato: selecione listas às quais os contatos recém-adicionados devem pertencer."
-
-#: modules/constant-contact.php:597
-msgctxt "Constant Contact"
-msgid "Contact Lists"
-msgstr "Listas de contato"
-
-#: modules/constant-contact.php:578
+#: modules/constant-contact/service.php:410
 msgctxt "API keys"
 msgid "Reset Keys"
 msgstr "Redefinir chaves"
 
-#: modules/constant-contact.php:507
+#: modules/constant-contact/service.php:339
 msgid "This site is connected to the Constant Contact API."
 msgstr "Este site está conectado à API do Constant Contact."
 
-#: modules/constant-contact.php:486
+#: modules/constant-contact/service.php:318
 msgid "Configuration updated."
 msgstr "Configuração atualizada."
 
-#: modules/constant-contact.php:480
+#: modules/constant-contact/service.php:312
 msgid "Failed to establish connection. Please double-check your configuration."
 msgstr "Falha ao estabelecer a conexão. Verifique sua configuração."
 
-#: modules/constant-contact.php:473
+#: modules/constant-contact/service.php:305
 msgid "Connection established."
 msgstr "Conexão estabelecida."
 
 #. translators: 1: response code, 2: message, 3: body, 4: URL
-#: includes/functions.php:622
+#: includes/functions.php:646
 msgid "HTTP Response: %1$s %2$s %3$s from %4$s"
 msgstr "Resposta HTTP: %1$s %2$s %3$s de %4$s"
 
@@ -289,7 +282,7 @@ msgstr "reCAPTCHA (v3)"
 msgid "API keys for reCAPTCHA v3 are different from those for v2; keys for v2 don&#8217;t work with the v3 API. You need to register your sites again to get new keys for v3. For details, see %s."
 msgstr "As chaves de API para reCAPTCHA v3 são diferentes na v2; as chaves da v2 não funcionam com a API v3. Você precisa registrar seus sites novamente para obter novas chaves para v3. Para saber mais, consulte %s."
 
-#: modules/constant-contact.php:583
+#: modules/constant-contact/service.php:415
 msgid "Connect to the Constant Contact API"
 msgstr "Conectar a API do Constant Contact"
 
@@ -298,44 +291,50 @@ msgctxt "API keys"
 msgid "Remove Keys"
 msgstr "Remover chaves"
 
-#: modules/constant-contact.php:570
+#: modules/constant-contact/service.php:402
 msgid "Set this URL as the redirect URI."
 msgstr "Defina essa URL como o URI de redirecionamento."
 
-#: modules/constant-contact.php:563
+#: modules/constant-contact/service.php:395
 msgid "Redirect URI"
 msgstr "Redirecionar URI"
 
-#: modules/constant-contact.php:546
+#: modules/constant-contact/service.php:378
 msgid "App Secret"
 msgstr "Segredo do aplicativo"
 
-#: modules/constant-contact.php:529
+#: modules/constant-contact/service.php:361
 msgid "API Key"
 msgstr "Chave da API"
 
-#: modules/constant-contact.php:517 modules/recaptcha/recaptcha.php:476
+#: modules/constant-contact/service.php:349 modules/recaptcha/recaptcha.php:476
 #: modules/stripe/service.php:179
 msgid "Setup Integration"
 msgstr "Definir integração"
 
-#: modules/constant-contact.php:500
+#: modules/constant-contact/contact-form-properties.php:174
+#: modules/constant-contact/service.php:332
 msgid "Constant Contact integration"
 msgstr "Integraçã do Constant Contact"
 
-#: admin/includes/welcome-panel.php:156 modules/constant-contact.php:496
+#: admin/includes/welcome-panel.php:156
+#: modules/constant-contact/contact-form-properties.php:173
+#: modules/constant-contact/service.php:328
 msgid "https://contactform7.com/constant-contact-integration/"
 msgstr "https://contactform7.com/constant-contact-integration/"
 
-#: modules/constant-contact.php:494
+#: modules/constant-contact/service.php:326
 msgid "The Constant Contact integration module allows you to send contact data collected through your contact forms to the Constant Contact API. You can create reliable email subscription services in a few easy steps. For details, see %s."
 msgstr "O módulo de integração do Constant Contact permite que você envie dados de contato coletados por meio dos seus formulários de contato para a API do Constant Contact. Você pode criar serviços de assinatura de e-mail confiável com facilidade e em poucas etapas. Para obter detalhes, consulte %s."
 
-#: admin/includes/welcome-panel.php:157 modules/constant-contact.php:246
+#: admin/includes/welcome-panel.php:157
+#: modules/constant-contact/contact-form-properties.php:181
+#: modules/constant-contact/contact-form-properties.php:281
+#: modules/constant-contact/service.php:101
 msgid "Constant Contact"
 msgstr "Constant Contact"
 
-#: modules/constant-contact.php:13
+#: modules/constant-contact/constant-contact.php:22
 msgid "Email marketing"
 msgstr "E-mail marketing"
 
@@ -457,7 +456,7 @@ msgstr "Se você gosta de usar o Contact Form 7 e o acha útil, considere %s."
 msgid "It is hard to continue development and support for this plugin without contributions from users like you."
 msgstr "É difícil continuar o desenvolvimento e suporte para este plugin sem contribuições de usuários como você."
 
-#: includes/contact-form.php:459 includes/contact-form.php:972
+#: includes/contact-form.php:519 includes/contact-form.php:1032
 msgid "This contact form is available only for logged in users."
 msgstr "Este formulário de contato está disponível apenas para usuários conectados."
 
@@ -560,7 +559,7 @@ msgstr "1 erro de configuração encontrado"
 #. function name
 #. translators: 1: WordPress hook name, 2: version number, 3: alternative hook
 #. name
-#: includes/functions.php:513 includes/functions.php:550
+#: includes/functions.php:537 includes/functions.php:574
 msgid "%1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
 msgstr "%1$s foi <strong>descontinuada</strong> desde a versão %2$s do Contact Form 7! Utilize a %3$s no lugar."
 
@@ -697,7 +696,6 @@ msgid "Thank you for your message. It has been sent."
 msgstr "Agradecemos a sua mensagem."
 
 #. translators: 1: blog name, 2: [your-subject]
-#. translators: 1: blog name, 2: [your-subject]
 #: includes/contact-form-template.php:52 includes/contact-form-template.php:96
 msgctxt "mail subject"
 msgid "%1$s \"%2$s\""
@@ -790,7 +788,7 @@ msgid "https://contactform7.com/"
 msgstr "https://contactform7.com/"
 
 #. translators: title of your first contact form. %d: number fixed to '1'
-#: load.php:199
+#: load.php:184
 msgid "Contact form %d"
 msgstr "Formulário de contato %d"
 
@@ -1223,11 +1221,11 @@ msgstr "Gera uma tag de formulário para uma caixa de marcação de aceitação.
 msgid "acceptance"
 msgstr "aceite"
 
-#: includes/contact-form.php:225
+#: includes/contact-form.php:221
 msgid "<code>%1$s</code> property of a <code>WPCF7_ContactForm</code> object is <strong>no longer accessible</strong>. Use <code>%2$s</code> method instead."
 msgstr "A propriedade <code>%1$s</code> do objeto <code>WPCF7_ContactForm</code> <strong>não é mais acessível</strong>. Use o método <code>%2$s</code> em vez disso."
 
-#: includes/contact-form.php:110 includes/contact-form.php:368
+#: includes/contact-form.php:110 includes/contact-form.php:428
 msgid "Untitled"
 msgstr "Sem título"
 
@@ -1267,7 +1265,6 @@ msgstr "O envio da mensagem do remetente falhou"
 msgid "Sender's message was sent successfully"
 msgstr "A mensagem foi enviada com sucesso"
 
-#. translators: 1: blog name, 2: blog URL
 #. translators: 1: blog name, 2: blog URL
 #: includes/contact-form-template.php:77 includes/contact-form-template.php:111
 msgid "This e-mail was sent from a contact form on %1$s (%2$s)"
